@@ -58,9 +58,7 @@ st.sidebar.write("""
 # Choose or drop up to 50 files here
 """)
 
-code = '''def hello():
-     print("Spleeter is Deezer source separation library with pretrained models written in Python and uses Tensorflow. It makes it easy to train source separation model (assuming you have a dataset of isolated sources), and provides already trained state of the art model for performing various flavour of separation")'''
-st.code(code, language='python')
+st.caption('Fast, easy, and precise stem extraction using a next-generation vocal remover and music source separation service. Remove vocal, instrumental, drums, bass, and piano from tracks without quality loss')
 
 st.sidebar.write("""
 # Local audio file
