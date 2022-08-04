@@ -1,15 +1,9 @@
 import os
 from pathlib import Path
 from typing import Generator, List
-from auth0_component import login_button
+
 import streamlit as st
 from spleeter.separator import Codec
-
-clientId = "b19KJIvgG8cuyJhKXoPXYvSAulRl6qdt"
-domain = "splitmyaudio.eu.auth0.com"
-
-user_info = login_button(clientId, domain = domain)
-st.write(user_info)
 
 st.set_page_config(
      page_title="Split My Audio",
