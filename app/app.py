@@ -34,8 +34,8 @@ if authentication_status == None:
 if authentication_status:
 
 # - - - - SIDEBAR - - - 
-authenticator.logout("Logout", "sidebar")
-st. sidebar. title(f"Welcome {name}")
+# authenticator.logout("Logout", "sidebar")
+# st.sidebar.title(f"Welcome {name}")
 
 st.set_page_config(
      page_title="Split My Audio",
