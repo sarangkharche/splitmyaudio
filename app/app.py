@@ -77,6 +77,8 @@ st.sidebar.write("""
 # From YouTube url
 """)
 
+st.write(m. run(window=15))
+
 
 def youtube_dl_wrapper(url, bitrate):
     if(url == ""):
