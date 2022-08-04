@@ -1,43 +1,11 @@
 import os
-import pickle
 from pathlib import Path
 from typing import Generator, List
+
 import streamlit as st
-import streamlit_authenticator as stauth
-
-
 from spleeter.separator import Codec
 
-# - - - USER AUTHENTICATION - - - 
-names = ["Peter Parker", "Rebecca Miller"]
-
-usernames = ["pparker", "rmiller"] 
-
-# Load hashed passwords
-file_path = Path(__file_).parent / "hashed_pw.pk1"
-with file_path.open("rb") as file:
-    hashed_passwords = pickle.load(file)
-
-authenticator = stauth.Authenticate(names, usernames, hashed_passwords,
-"sales dashboard", "abcdef", cookie_expiry_day=30)
-
-name, authentication_status, username = authenticator.login("Login", "main")
-
-
-
-if authentication_status == False:
-    st. error ("Username/password is incorrect")
-
-if authentication_status == None:
-    st.warning("Please enter your username and password")
-
-
-if authentication_status:
-
-# - - - - SIDEBAR - - - 
-# authenticator.logout("Logout", "sidebar")
-# st.sidebar.title(f"Welcome {name}")
-    st.set_page_config(
+st.set_page_config(
      page_title="Split My Audio",
      page_icon="app/media/favicon_io/favicon-32x32.png",
      layout="wide",
