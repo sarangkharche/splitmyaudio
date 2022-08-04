@@ -85,8 +85,9 @@ def youtube_dl_wrapper(url, bitrate):
     if(url == ""):
         st.warning("Please enter a valid url")
     else:
-        with st.spinner(f'Downloading {get_title_from_youtube_url(url)}...'):
+        with st.spinner(f'Downloading {get_title_from_youtube_url(url)} from YouTube servers...'):
             progress = st.progress(0)
+            st.balloons()
             file_list = download_youtube_as_mp3(
                 url, UPLOAD_DIR, progress.progress, bitrate)
             for file in file_list:
