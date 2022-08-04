@@ -165,7 +165,7 @@ if(current_mode == ProcessingMode.SINGLE):
                 st.session_state.spleeter_settings = current_settings
                 st.session_state.selected_music_file = selected_music
                 st.session_state.output_files = []
-                with st.spinner('Wait for spleeter processing...'):
+                with st.spinner('We are spliting you audio...'):
                     output_files_generator, is_exist = get_split_audio(
                         st.session_state.spleeter_settings,
                         selected_music,
