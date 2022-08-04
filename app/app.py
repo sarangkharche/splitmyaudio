@@ -63,7 +63,7 @@ st.sidebar.write("""
 """)
 
 # audio file uploader
-upload_files = st.sidebar.file_uploader("Choose an audio file", type=[
+upload_files = st.sidebar.file_uploader("Select Files", type=[
     "wav", "mp3"], accept_multiple_files=True)
 
 for audio_file in upload_files:
