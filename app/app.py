@@ -24,12 +24,11 @@ name, authentication_status, username = authenticator.login("Login", "main")
 
 
 
-if authentication status == False:
+if authentication_status == False:
+    st. error ("Username/password is incorrect")
 
-st. error ("Username/password is incorrect")
-
-if authentication status == None:
-st.warning("Please enter your username and password")
+if authentication_status == None:
+    st.warning("Please enter your username and password")
 
 
 if authentication_status:
