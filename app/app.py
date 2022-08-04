@@ -36,8 +36,7 @@ if authentication_status:
 # - - - - SIDEBAR - - - 
 # authenticator.logout("Logout", "sidebar")
 # st.sidebar.title(f"Welcome {name}")
-
-st.set_page_config(
+    st.set_page_config(
      page_title="Split My Audio",
      page_icon="app/media/favicon_io/favicon-32x32.png",
      layout="wide",
