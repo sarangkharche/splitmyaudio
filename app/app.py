@@ -5,6 +5,18 @@ from typing import Generator, List
 import streamlit as st
 from spleeter.separator import Codec
 
+st.set_page_config(
+     page_title="Split My Audio",
+     page_icon="app/media/favicon_io/favicon-32x32.png",
+     layout="wide",
+     initial_sidebar_state="expanded",
+     menu_items={
+         'Get Help': 'https://www.instagram.com/astrokid.music/?hl=en',
+         'Report a bug': "https://www.instagram.com/astrokid.music/?hl=en",
+         'About': "# Split My Audio is for all my fellow music producers!"
+     }
+ )
+
 from utils import (ProcessingMode, SpleeterMode, SpleeterSettings,
                    download_youtube_as_mp3, get_audio_separated_zip,
                    get_multi_audio_separated_zip, get_split_audio,
@@ -55,15 +67,17 @@ def save_uploaded_file(upload_file) -> Path:
 
 # sidebar start --------------------------------------------------------------
 st.sidebar.write("""
-# Audio upload
+# Choose or drop up to 50 files here
 """)
 
+st.sidebar.caption('Fast, easy, and precise stem extraction using a next-generation vocal remover and music source separation service. Remove vocal, instrumental, drums, bass, and piano from tracks without quality loss')
+
 st.sidebar.write("""
-# From local audio file
+# Local audio file
 """)
 
 # audio file uploader
-upload_files = st.sidebar.file_uploader("Choose an audio file", type=[
+upload_files = st.sidebar.file_uploader("Select Files", type=[
     "wav", "mp3"], accept_multiple_files=True)
 
 for audio_file in upload_files:
@@ -74,15 +88,16 @@ for audio_file in upload_files:
 # youtubedl mp3
 # text input area for youtube url
 st.sidebar.write("""
-# From YouTube url
+# Paste YouTube url here
 """)
+
 
 
 def youtube_dl_wrapper(url, bitrate):
     if(url == ""):
         st.warning("Please enter a valid url")
     else:
-        with st.spinner(f'Downloading {get_title_from_youtube_url(url)}...'):
+        with st.spinner(f'Downloading {get_title_from_youtube_url(url)} from YouTube servers...'):
             progress = st.progress(0)
             file_list = download_youtube_as_mp3(
                 url, UPLOAD_DIR, progress.progress, bitrate)
@@ -109,7 +124,8 @@ if st.sidebar.button("Reload"):
 
 # main page -------------------------------------------------------------------
 
-st.title("Split My Audio by Astrokid")
+st.title("SplitMyAudio by Astrokid")
+st.info('Follow on instagram @astrokid.music for updates')
 
 current_mode = st.selectbox(
     "Mode", ProcessingMode, format_func=lambda x: x.value)
