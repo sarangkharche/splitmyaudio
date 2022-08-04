@@ -58,7 +58,7 @@ st.sidebar.write("""
 # Choose or drop up to 50 files here
 """)
 
-st.caption('Fast, easy, and precise stem extraction using a next-generation vocal remover and music source separation service. Remove vocal, instrumental, drums, bass, and piano from tracks without quality loss')
+st.sidebar.caption('Fast, easy, and precise stem extraction using a next-generation vocal remover and music source separation service. Remove vocal, instrumental, drums, bass, and piano from tracks without quality loss')
 
 st.sidebar.write("""
 # Local audio file
