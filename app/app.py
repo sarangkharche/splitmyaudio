@@ -5,6 +5,18 @@ from typing import Generator, List
 import streamlit as st
 from spleeter.separator import Codec
 
+st.set_page_config(
+     page_title="Split My Audio",
+     page_icon="🧊",
+     layout="wide",
+     initial_sidebar_state="expanded",
+     menu_items={
+         'Get Help': 'https://www.instagram.com/astrokid.music/?hl=en',
+         'Report a bug': "https://www.instagram.com/astrokid.music/?hl=en",
+         'About': "# This is a header. This is an *extremely* cool app!"
+     }
+ )
+
 from utils import (ProcessingMode, SpleeterMode, SpleeterSettings,
                    download_youtube_as_mp3, get_audio_separated_zip,
                    get_multi_audio_separated_zip, get_split_audio,
