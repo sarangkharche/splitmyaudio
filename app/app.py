@@ -7,13 +7,13 @@ from spleeter.separator import Codec
 
 st.set_page_config(
      page_title="Split My Audio",
-     page_icon="🧊",
+     page_icon="/com.docker.devenvironments.code/app/media/favicon_io/favicon-32x32.png",
      layout="wide",
      initial_sidebar_state="expanded",
      menu_items={
          'Get Help': 'https://www.instagram.com/astrokid.music/?hl=en',
          'Report a bug': "https://www.instagram.com/astrokid.music/?hl=en",
-         'About': "# This is a header. This is an *extremely* cool app!"
+         'About': "# Split My Audio is for all my fellow music producers!"
      }
  )
 
