@@ -1,8 +1,8 @@
-version: '3.8'
+version: "3.8"
 
 services:
   streamlit:
-    build: 
+    build:
       context: .
       dockerfile: ./compose/streamlit/Dockerfile
     image: streamlit_local
@@ -10,4 +10,4 @@ services:
     restart: always
     ports:
       - 8501:8501
-    command: streamlit run app/app_6.py
+    command: streamlit run app/app.py

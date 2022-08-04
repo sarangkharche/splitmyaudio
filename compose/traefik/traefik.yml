@@ -28,7 +28,7 @@ certificatesResolvers:
 http:
   routers:
     web-secure-router:
-      rule: "Host(`g4ad2xlargemusic.cndevapi.com`)"
+      rule: "Host(`splitmyaudio.findymyip.com`)"
       entryPoints:
         - web-secure
       middlewares:
