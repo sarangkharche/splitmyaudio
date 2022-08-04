@@ -2,7 +2,7 @@ import os
 import pickle
 from pathlib import Path
 from typing import Generator, List
-import streamlit authenticator as stauth
+import streamlit_authenticator as stauth
 
 import streamlit as st
 from spleeter.separator import Codec
