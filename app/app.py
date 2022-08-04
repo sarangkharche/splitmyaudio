@@ -7,7 +7,7 @@ from spleeter.separator import Codec
 
 st.set_page_config(
      page_title="Split My Audio",
-     page_icon="/com.docker.devenvironments.code/app/media/favicon_io/favicon-32x32.png",
+     page_icon="app/media/favicon_io/favicon-32x32.png",
      layout="wide",
      initial_sidebar_state="expanded",
      menu_items={
