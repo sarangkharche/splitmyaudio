@@ -55,11 +55,11 @@ def save_uploaded_file(upload_file) -> Path:
 
 # sidebar start --------------------------------------------------------------
 st.sidebar.write("""
-# Audio upload
+# Choose or drop up to 50 files here
 """)
 
 st.sidebar.write("""
-# From local audio file
+# Local audio file
 """)
 
 # audio file uploader
@@ -74,7 +74,7 @@ for audio_file in upload_files:
 # youtubedl mp3
 # text input area for youtube url
 st.sidebar.write("""
-# From YouTube url
+# Paste YouTube url here
 """)
 
 
