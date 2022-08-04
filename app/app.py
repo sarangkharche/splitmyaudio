@@ -109,7 +109,7 @@ if st.sidebar.button("Reload"):
 
 # main page -------------------------------------------------------------------
 
-st.title("Spleeter WEB UI")
+st.title("Split My Audio by Astrokid")
 
 current_mode = st.selectbox(
     "Mode", ProcessingMode, format_func=lambda x: x.value)
