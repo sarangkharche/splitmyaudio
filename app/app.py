@@ -5,8 +5,8 @@ from typing import Generator, List
 import streamlit as st
 from spleeter.separator import Codec
 
-with open('style. css') as f:
-    st. markdown(' <style>{f.read()}</style>', unsafe_allow_html=True)
+with open('style.css') as f:
+    st. markdown('<style>{f.read()}</style>',unsafe_allow_html=True)
 
 st.set_page_config(
      page_title="Split My Audio",
