@@ -6,9 +6,6 @@ import streamlit as st
 from spleeter.separator import Codec
 
 
-import streamlit as st
-import streamlit_authenticator as stauth
-
 st.set_page_config(
      page_title="Split My Audio",
      page_icon="app/media/favicon_io/favicon-32x32.png",
@@ -30,21 +27,6 @@ from utils import (ProcessingMode, SpleeterMode, SpleeterSettings,
 UPLOAD_DIR = Path("./upload_files/")
 OUTPUT_DIR = Path("./output/")
 
-
-hashed_passwords = stauth.Hasher(['123', '456']).generate()
-
-with open('../config.yaml') as file:
-    config = yaml.load(file, Loader=SafeLoader)
-
-authenticator = Authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
-
-name, authentication_status, username = authenticator.login('Login', 'main')
 
 
 # page states ---------------------------------------------------------------
